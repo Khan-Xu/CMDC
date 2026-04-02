@@ -113,8 +113,8 @@ def aerial_image_cmdc_fullstack(
                 sep_field += temp_res
 
         np.square(sep_field.real, out = intensity_buffer)
-        np.square(sep_field.imag, out = intensity_buffer)
         aerial_image += intensity_buffer  
+        np.square(sep_field.imag, out = intensity_buffer)
         aerial_image += intensity_buffer 
 
     return aerial_image
