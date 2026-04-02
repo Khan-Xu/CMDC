@@ -25,6 +25,7 @@ from copy import deepcopy
 
 import numpy as np
 
+import time
 import sys
 sys.path.append(r'D:\Processing\Beamline\simulation\cat')
 import os
@@ -214,7 +215,8 @@ if __name__ == "__main__":
             
         #---------------------------------------------------
         # beamline propagation
-        
+
+        t_start = time.time()
         # from source screen to dcm screen
         
         source_screen = deepcopy(decoupling_source)
@@ -268,6 +270,8 @@ if __name__ == "__main__":
         focus = screen(optic = hkb_mirror, position = 80, dim = 1)
         fresnel_1d(hkb_mirror, focus)
         
+        t_end = time.time()
+        print("beamline simulation finished in %.2f" % (t_end - t_start))
         #---------------------------------------------------
         # visulation
         
