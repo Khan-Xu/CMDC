@@ -4,7 +4,7 @@
 # Copyright (c) 
 #-----------------------------------------------------------------------------#
 
-__authors__  = "Han Xu - HEPS Hard X-ray Scattering Beamline (B4)"
+__authors__  = "Han Xu"
 __date__     = "Date : Wed Oct  8 19:31:56 2025"
 __email__    = "xuhan@ihep.ac.cn"
 
@@ -35,7 +35,7 @@ import os
 
 file_header = r"D:\File\Paper\CMDC\simulation"
 source_file_name = os.path.join(
-    file_header, r"HEPS_phaseI_VIB_DL_GS_configuration@12400eV_B4IVULB.h5"
+    file_header, r"HEPS_phaseI_VIB_DL_configuration@12400eV_B4IVULB.h5"
     )
 
 unit = '$\u03bc$m' 
@@ -277,7 +277,7 @@ if __name__ == "__main__":
             )
         focus.generate_2d()
         test_plot = plot_optic(focus)
-        test_plot.intensity(fit = 1, fit_mode = "sigma", mode = "sum")
+        test_plot.intensity()
     
     
     
