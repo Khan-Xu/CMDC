@@ -36,7 +36,7 @@ import os
 
 file_header = r"D:\File\Paper\CMDC\simulation"
 source_file_name = os.path.join(
-    file_header, r"HEPS_phaseI_VIB_DL_configuration@12400eV_B4IVULB.h5"
+    file_header, r"HEPS_phaseI_VIB_DL_GS_configuration@12400eV_B4IVULB.h5"
     )
 
 unit = '$\u03bc$m' 
